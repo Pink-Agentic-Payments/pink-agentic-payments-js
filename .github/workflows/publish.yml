@@ -1,0 +1,37 @@
+name: Publish to npm
+
+# DORMANT: this workflow needs an npm Trusted Publisher (or an NPM_TOKEN
+# secret) configured on npmjs.com before it can succeed. No npm account
+# exists for this package yet, so do not cut a release/tag until that's
+# set up.
+#
+# Only runs on a release tag (e.g. v0.1.0), never on every push.
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: read
+  id-token: write # required for npm provenance / OIDC trusted publishing
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+
+      # Requires npm >= 11.5 configured as a Trusted Publisher for this
+      # package on npmjs.com (Settings -> Trusted Publisher -> GitHub
+      # Actions, pointing at this repo + this workflow file). No NPM_TOKEN
+      # secret needed; auth is via OIDC.
+      - run: npm publish --provenance --access public

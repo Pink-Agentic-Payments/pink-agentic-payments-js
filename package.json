@@ -1,0 +1,61 @@
+{
+  "name": "pink-agentic-payments",
+  "version": "0.1.0",
+  "description": "Pink Agentic AI Payments client: lets AI agents pay within spending rules you set, checked against per-agent budgets, caps, payee allow-lists and approval rules before a single-use credential is issued.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepare": "tsup",
+    "build": "tsup",
+    "test": "node --test --import tsx tests/*.test.ts",
+    "quickstart": "tsx examples/quickstart.ts"
+  },
+  "keywords": [
+    "ai-agents",
+    "agent-payments",
+    "mcp",
+    "spending-limits",
+    "agentic-payments",
+    "pinkwallet",
+    "pink"
+  ],
+  "homepage": "https://pinkwallet.com/agentic/developers/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pink-Agentic-Payments/pink-agentic-payments-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pink-Agentic-Payments/pink-agentic-payments-js/issues"
+  },
+  "license": "MIT",
+  "author": "PinkWallet",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
