@@ -1,11 +1,7 @@
 name: Publish to npm
 
-# DORMANT: this workflow needs an npm Trusted Publisher (or an NPM_TOKEN
-# secret) configured on npmjs.com before it can succeed. No npm account
-# exists for this package yet, so do not cut a release/tag until that's
-# set up.
-#
-# Only runs on a release tag (e.g. v0.1.0), never on every push.
+# Publishes via npm OIDC Trusted Publishing (no NPM_TOKEN secret). Only
+# runs on a release tag (e.g. v0.1.0), never on every push.
 on:
   push:
     tags:

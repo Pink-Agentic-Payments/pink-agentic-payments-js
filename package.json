@@ -1,6 +1,6 @@
 {
   "name": "pink-agentic-payments",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pink Agentic AI Payments client: lets AI agents pay within spending rules you set, checked against per-agent budgets, caps, payee allow-lists and approval rules before a single-use credential is issued.",
   "type": "module",
   "main": "./dist/index.cjs",

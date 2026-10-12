@@ -1,5 +1,7 @@
 # pink-agentic-payments
 
+[![npm version](https://img.shields.io/npm/v/pink-agentic-payments.svg)](https://www.npmjs.com/package/pink-agentic-payments)
+
 Pink Agentic AI Payments lets AI agents pay within spending rules you set: every payment is checked against per-agent budgets, caps, payee allow-lists and approval rules before a single-use credential is issued.
 
 This is the JavaScript/TypeScript client for Pink Agentic AI Payments by PinkWallet, published by the Pink team. Version 0.1 targets the public **sandbox**. The sandbox is free, needs no signup, uses test money only, and is meant for building and demoing agent integrations. Production is early access; see pinkwallet.com/agentic.
@@ -8,16 +10,14 @@ Design partners wanted: free hands-on setup and early access during the design-p
 
 ## Install
 
-npm isn't live yet (no npm account set up). Install straight from GitHub for now:
+```bash
+npm install pink-agentic-payments
+```
+
+Alternatively, install straight from GitHub:
 
 ```bash
 npm install github:Pink-Agentic-Payments/pink-agentic-payments-js
-```
-
-Once the first npm release ships, this will become:
-
-```bash
-npm install pink-agentic-payments
 ```
 
 Zero runtime dependencies. Requires Node.js >= 18 (uses the global `fetch`).
