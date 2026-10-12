@@ -4,6 +4,8 @@ Pink Agentic AI Payments lets AI agents pay within spending rules you set: every
 
 This is the JavaScript/TypeScript client for Pink Agentic AI Payments by PinkWallet, published by the Pink team. Version 0.1 targets the public **sandbox**. The sandbox is free, needs no signup, uses test money only, and is meant for building and demoing agent integrations. Production is early access; see pinkwallet.com/agentic.
 
+Design partners wanted: free hands-on setup and early access during the design-partner period, at [agentic-sandbox.pinkwallet.com/demo](https://agentic-sandbox.pinkwallet.com/demo). Reach us at [support@pinkwallet.com](mailto:support@pinkwallet.com) or open an issue titled "Design partner" in this repo.
+
 ## Install
 
 npm isn't live yet (no npm account set up). Install straight from GitHub for now:
