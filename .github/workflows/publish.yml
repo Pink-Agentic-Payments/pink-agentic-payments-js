@@ -22,6 +22,10 @@ jobs:
           node-version: "20"
           registry-url: "https://registry.npmjs.org"
 
+      # OIDC trusted publishing needs npm >= 11.5; the npm bundled with
+      # actions/setup-node's Node 20 is older, so upgrade it first.
+      - run: npm install -g npm@latest
+
       - run: npm ci
       - run: npm test
       - run: npm run build
